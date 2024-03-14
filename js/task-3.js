@@ -3,7 +3,10 @@
 'use strict';
 
 function checkForSpam(message) { 
-    return (message.toLowerCase().includes("spam") || message.toLowerCase().includes("sale")) ? true : false;
+
+    const lowered = message.toLowerCase();
+    // return (message.toLowerCase().includes("spam") || message.toLowerCase().includes("sale")) ? true : false;
+    return lowered.includes("spam") || lowered.includes("sale");
 }
 
 console.log(checkForSpam("Latest technology news")); // false
